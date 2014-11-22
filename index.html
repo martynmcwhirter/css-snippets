@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>CSS Snippets</title>
+		<meta name="description" content="CSS Snippets from Martyn McWhirter">
+		<meta name="keywords" content="css snippets, css, snippets, Martyn McWhirter">
+		<link rel="stylesheet" type="text/css" href="includes/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="includes/css/transitions.css" />
+		<link rel="stylesheet" type="text/css" href="includes/css/prism.css" />
+	</head>
+	<body>
+		<div class="shell">
+
+			<div class="head">
+				<h1>CSS Snippets</h1>
+				<p>A small collection of useful CSS snippets</p>
+			</div>
+
+			<div class="title">
+				<h2>Responsive Grid System</h2>
+				<p class="center">(uses background-clip so doesn't work in IE8)</p>
+			</div>
+			<div class="section">
+				<div class="row">
+					<div class="col col3">
+						<p>Col3</p>
+					</div>
+					<div class="col col3">
+						<p>Col3</p>
+					</div>
+					<div class="col col3">
+						<p>Col3</p>
+					</div>
+					<div class="col col3">
+						<p>Col3</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col12">
+						<p>Col12</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col6">
+						<p>Col6</p>
+					</div>
+					<div class="col col4">
+						<p>Col4</p>
+					</div>
+					<div class="col col2">
+						<p>Col2</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col4">
+						<p>Col4</p>
+					</div>
+					<div class="col col8">
+						<p>Col8</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<pre>
+						<code class="language-css">
+	.row {
+		clear: left;
+		margin-left: -10px;
+		overflow: hidden;
+	}
+
+	.col {
+		background-color: #c0da52;
+		border: 0px solid rgba(0,0,0,0);
+		border-left-width: 10px;
+		float: left;
+		margin-bottom: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-moz-background-clip: padding-box !important;
+		-webkit-background-clip: padding-box !important;
+		background-clip: padding-box !important;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.col12 {
+	  width: 100%;
+	}
+
+	.col11 {
+	  width: 91.66666666666666%;
+	}
+
+	.col10 {
+	  width: 83.33333333333334%;
+	}
+
+	.col9 {
+	  width: 75%;
+	}
+
+	.col8 {
+	  width: 66.66666666666666%;
+	}
+
+	.col7 {
+	  width: 58.333333333333336%;
+	}
+
+	.col6 {
+	  width: 50%;
+	}
+
+	.col5 {
+	  width: 41.66666666666667%;
+	}
+
+	.col4 {
+	  width: 33.33333333333333%;
+	}
+
+	.col3 {
+	  width: 25%;
+	}
+
+	.col2 {
+	  width: 16.666666666666664%;
+	}
+
+	.col1 {
+	  width: 8.333333333333332%;
+	}
+
+	@media screen and (max-width: 640px) {
+		.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11 {
+			float: none;
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+						</code>
+					</pre>
+				</div>
+			</div>
+
+			<div class="title">
+				<h2>Text Shadow</h2>
+			</div>
+			<div class="section">
+				<div class="row">
+					<div class="col col12">
+						<p class="shadow">This is an example of some text that has a text shadow</p>
+					</div>
+				</div>
+				<div class="row">
+					<pre>
+						<code class="language-css">
+    p {
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    }
+						</code>
+					</pre>
+				</div>
+			</div>
+
+			<div class="title">
+				<h2>Transitions</h2>
+			</div>
+			<div class="section">
+				<h3>Positioning</h3>
+				<div class="row">
+					<div class="col col12">
+						<a href="#" class="button trans-bg-top">Up</a>
+					</div>
+				</div>
+				<div class="row">
+					<pre>
+						<code class="language-css">
+    a.button.trans-bg-top {
+    	position: relative;
+		transition: top 0.3s ease;
+	}
+
+	a.button.trans-bg-top:hover {
+		top: -5px;
+	}
+						</code>
+					</pre>
+				</div>
+
+				<div class="row">
+					<div class="col col12">
+						<a href="#" class="button trans-bg-slide">Slide</a>
+					</div>
+				</div>
+
+				<div class="row">
+					<pre>
+						<code class="language-css">
+    a.button.trans-bg-slide {
+		left: 0;
+		position: relative;
+		transition: left 0.6s ease;
+	}
+
+	a.button.trans-bg-slide:hover {
+		left: 30px;
+	}
+						</code>
+					</pre>
+				</div>
+
+				<h3>Metrics</h3>
+				<div class="row">
+					<div class="col col12">
+						<a href="#" class="button trans-bg-expand">Expand</a>
+					</div>
+				</div>
+
+				<div class="row">
+					<pre>
+						<code class="language-css">
+    a.button.trans-bg-expand {
+		width: 100px;
+		transition: width 0.6s ease;
+	}
+
+	a.button.trans-bg-expand:hover {
+		width: 160px;
+	}
+						</code>
+					</pre>
+				</div>
+
+				<h3>Scaling</h3>
+				<div class="row">
+					<div class="col col12">
+						<a href="#" class="button trans-bg-scale">Scale</a>
+					</div>
+				</div>
+
+				<div class="row">
+					<pre>
+						<code class="language-css">
+    a.button.trans-bg-scale {
+		transition: all 0.4s ease;
+	}
+
+	a.button.trans-bg-scale:hover {
+		transform: scale(1.2);
+	}
+						</code>
+					</pre>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript" src="includes/js/prism.js"></script>
+	</body>
+</html>
