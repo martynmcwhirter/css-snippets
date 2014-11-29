@@ -128,3 +128,12 @@ li {
 .footer p {
 	font-size: 0.8em;
 }
+
+a.github {
+	background: #202D3B url("../images/icons/github.png") no-repeat 10px center;
+	border-radius: 8px;
+	display: block;
+	font-size: 0.8em;
+	margin: 0 auto;
+	padding: 10px 10px 10px 40px;
+	width: 90px;
