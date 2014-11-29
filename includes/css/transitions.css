@@ -131,3 +131,12 @@ a.button.trans-bg-scale {
 a.button.trans-bg-scale:hover {
 	transform: scale(1.2);
 }
+
+/* Rotate */
+a.button.trans-rotate {
+	transform: rotate(20deg);
+}
+
+a.button.trans-rotate:hover {
+	transform: rotate(0deg);
+}
