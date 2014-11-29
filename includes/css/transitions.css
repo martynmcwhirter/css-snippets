@@ -134,6 +134,7 @@ a.button.trans-bg-scale:hover {
 
 /* Rotate */
 a.button.trans-rotate {
+	transition: all 0.4s ease;
 	transform: rotate(20deg);
 }
 
